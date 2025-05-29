@@ -18,7 +18,13 @@
   margin-left: 2rem;
 }
 
-.nav-item:hover {
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: none;
   color: mediumaquamarine;
 }
 
@@ -45,12 +51,6 @@
   transform: translate(-50%, -50%);
 }
 
-#headerDesc {
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-}
-
 /* ---------- MAIN CONTENT */
 .mainHeader h2{
   text-align: center;
@@ -59,28 +59,48 @@
 
 /* ---------- RECENT TRAVELS SECTION */
 .showcase {
-  margin: auto;
+  /* margin: auto;
   width: calc(100% - 200px);
   height: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: center; */
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 10px;
 }
 
 .showcaseItem {
-  justify-content: space-between;
-  align-items: center;
   gap: 1rem;
-  width: 50%;
+  width: 250px;
   height: auto;
   object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.showcaseItem:hover {
+  transform: scale(1.1);
 }
 
 .showcaseItem img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
 }
 
 /* ---------- PHONE NAVIGATION RWD */
@@ -106,5 +126,19 @@
 
   #headerDesc {
     padding-top: 5rem;
+  }
+}
+
+/* ---------- SHOWCASE RWD */
+@media screen and (max-width: 768px) {
+  .showcaseItem{ 
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .showcaseItem {
+    width: 100px;
+    gap: 0.5rem;
   }
 }
