@@ -58,61 +58,29 @@
 }
 
 /* ---------- RECENT TRAVELS SECTION */
-.container {
-  background-color: aquamarine;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.recentShowcase {
-  /* width: calc(100% - 400px); */
-  /* height: 200px; */
-  /* display: flex;
+.showcase {
+  margin: auto;
+  width: calc(100% - 200px);
+  height: 300px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin: 0 auto;
-  width: 1400px;
-  padding: 20px 10px; */
-  background-color: brown;
   text-align: center;
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 10px 10px; */
 }
 
 .showcaseItem {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  max-width: 300px;
-  height: 200px;
-  margin: 10px;
-  text-decoration: none;
+  gap: 1rem;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
 }
 
 .showcaseItem img {
   width: 100%;
-  max-width: 350px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.name:hover {
-  position: relative;
-  transition: all 0.6s ease;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 1;
+  height: auto;
 }
 
 /* ---------- PHONE NAVIGATION RWD */
