@@ -1,6 +1,7 @@
 /* ---------- WHOLE WEBSITE */
 * { 
   box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 /* ---------- NAVIGATION */
@@ -98,6 +99,7 @@ nav a:hover {
   border-radius: 10px;
 }
 
+/* ---------- FOOTER */
 footer {
   padding: 1rem;
   text-align: center;

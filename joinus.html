@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title></title>
 
     <link rel="icon" href="" type="image/png" />
-    <link rel="stylesheet" href="styletwo.css" />
+    <link rel="stylesheet" href="form.css" />
   </head>
 
   <!-- MAIN CONTENT -->
@@ -18,24 +22,77 @@
       <ul class="nav-list">
         <li class="nav-item" id="nav-item-logo">
           <a href="index.html"
-            ><img src="images/500 px 1.png" alt="madebyqpmaii logo" width="100px"
+            ><img
+              src="images/500 px 1.png"
+              alt="madebyqpmaii logo"
+              width="100px"
           /></a>
         </li>
         <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a href="profiles.html">Profiles</a></li>
         <li class="nav-item"><a href="joinus.html">Join Us</a></li>
       </ul>
     </nav>
     <!-- HEADER CONTENT -->
     <header>
-      <h1></h1>
+      <h1>Want a Villager Profile Card? Apply Here!</h1>
     </header>
     <!-- MAIN CONTENT -->
     <main>
+      <div class="container">
         <form name="signupForm" action="#" method="post">
-                      <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required placeholder="Enter name here "/>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your villager name here..."
+          />
+
+          <label for="name">Island Name:</label>
+          <input
+            type="text"
+            id="islandName"
+            name="islandName"
+            required
+            placeholder="Your island name here..."
+          />
+
+          <label for="name">Dream Address (optional):</label>
+          <input
+            type="text"
+            id="dreamAdd"
+            name="dreamAdd"
+            placeholder="DA-XXXX-XXXX-XXXX"
+          />
+
+          <label for="fruit">Native Fruit:</label>
+          <select id="fruit" name="fruit">
+            <option value="apple">Apple</option>
+            <option value="pear">Pear</option>
+            <option value="orange">Orange</option>
+            <option value="peach">Peach</option>
+            <option value="cherry">Cherry</option>
+          </select>
+
+          <label for="hemisphere">Hemisphere</label>
+          <select id="hemisphere" name="hemisphere">
+            <option value="northHem">Northern</option>
+            <option value="southHem">Southern</option>
+          </select>
+
+          <label for="description">Tell us about yourself!</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="I started playing in 2020.... My favourite villager is..."
+            style="height:200px;"
+          ></textarea>
+
+          <button type="submit" value="submit">Submit</button>
         </form>
+      </div>
     </main>
     <!-- FOOTER CONTENT -->
     <footer>&copy eqqtart 2025</footer>
