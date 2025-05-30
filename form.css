@@ -29,6 +29,20 @@ nav a:hover {
   color: mediumaquamarine;
 }
 
+/* ---------- PHONE NAVIGATION RWD */
+@media screen and (max-width: 470px) {
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+}
+
 /* ---------- FORM */
 h1{
   text-align: center;
