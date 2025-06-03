@@ -1,3 +1,15 @@
+// DARK MODE
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+// NAVIGATION
+  function toggleMenu() {
+    const navList = document.getElementById("navList");
+    navList.classList.toggle("active");
+  }
+
 // CARD FUNCTIONS
   function openCard(clickedCard) {
   // locate and select all cards
@@ -49,6 +61,37 @@ Thank you ${name} for your application! We shall send an email to ${email} once 
     // reset form after submit
     form.reset();
 }
+
+  // dream address functions
+ const input = document.getElementById("dreamAddy");
+
+  input.addEventListener("input", function () {
+    let userInput = this.value;
+
+    // make value starts with "DA-"
+    if (!userInput.startsWith("DA-")) {
+      userInput = "DA-" + userInput;
+    }
+
+    let digits = "";
+    for (let i = 0; i < userInput.length; i++) {
+      let character = userInput[i];
+      if (character >= '0' && character <= '9') {
+        digits += character;
+      }
+    }
+
+    // add dashes after every 4 numbers
+    let constant = "DA-";
+    for (let i = 0; i < digits.length; i++) {
+      constant += digits[i];
+      if ((i+1) % 4=== 0 && i !== digits.length - 1) {
+        constant += "-";
+      }
+    }
+
+    this.value = constant;
+  });
 
 // listen for user
 form.addEventListener("submit", handleSubmit);

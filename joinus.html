@@ -15,27 +15,24 @@
     <title>Maii's Crossing Journal</title>
 
     <link rel="icon" href="images/maiisjournallogo.png" type="image/png" />
-    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <!-- MAIN CONTENT -->
   <body>
     <!-- NAVIGATION BAR -->
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item" id="nav-item-logo">
-          <a href="index.html"
-            ><img
-              src="images/maiisjournallogo.png"
-              alt="madebyqpmaii logo"
-              width="100px"
-          /></a>
-        </li>
-        <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="profiles.html">Profiles</a></li>
-        <li class="nav-item"><a href="joinus.html">Join Us</a></li>
-      </ul>
-    </nav>
+<nav class="navContainer">
+    <a href="index.html" id="nav-item-logo">
+      <img src="images/maiisjournallogo.png" alt="madebyqpmaii logo" width="100px" />
+    </a>
+    <ul class="nav-list" id="navList">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="profiles.html">Profiles</a></li>
+      <li class="nav-item"><a href="joinus.html">Join Us</a></li>
+      <li class="nav-item" id="darkMode"><button onclick="myFunction()">Dark mode</button></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
     <!-- HEADER CONTENT -->
     <header>
       <h1>Want a Villager Profile Card? Apply Here!</h1>
@@ -70,7 +67,8 @@
             type="text"
             id="dreamAddy"
             name="dreamAddy"
-            placeholder="DA-XXXX-XXXX-XXXX"
+            placeholder="Insert dream address here..."
+            maxlength="17"
           />
 
           <label for="fruit">Native Fruit:</label>
