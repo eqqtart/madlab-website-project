@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <title></title>
+    <title>Maii's Crossing Journal</title>
 
-    <link rel="icon" href="" type="image/png" />
+    <link rel="icon" href="images/maiisjournallogo.png" type="image/png" />
     <link rel="stylesheet" href="form.css" />
   </head>
 
@@ -23,7 +26,7 @@
         <li class="nav-item" id="nav-item-logo">
           <a href="index.html"
             ><img
-              src="images/500 px 1.png"
+              src="images/maiisjournallogo.png"
               alt="madebyqpmaii logo"
               width="100px"
           /></a>
@@ -40,17 +43,20 @@
     <!-- MAIN CONTENT -->
     <main>
       <div class="container">
-        <form name="signupForm" action="#" method="post">
+        <form name="signupForm" action="" method="post">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="Your email address here..."/>
+
           <label for="name">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            placeholder="Your villager name here..."
+            placeholder="Your character name here..."
           />
 
-          <label for="name">Island Name:</label>
+          <label for="islandName">Island Name:</label>
           <input
             type="text"
             id="islandName"
@@ -59,16 +65,16 @@
             placeholder="Your island name here..."
           />
 
-          <label for="name">Dream Address (optional):</label>
+          <label for="dreamAddy">Dream Address (optional):</label>
           <input
             type="text"
-            id="dreamAdd"
-            name="dreamAdd"
+            id="dreamAddy"
+            name="dreamAddy"
             placeholder="DA-XXXX-XXXX-XXXX"
           />
 
           <label for="fruit">Native Fruit:</label>
-          <select id="fruit" name="fruit">
+          <select id="fruit" name="fruit" required>
             <option value="apple">Apple</option>
             <option value="pear">Pear</option>
             <option value="orange">Orange</option>
@@ -76,18 +82,36 @@
             <option value="cherry">Cherry</option>
           </select>
 
-          <label for="hemisphere">Hemisphere</label>
-          <select id="hemisphere" name="hemisphere">
-            <option value="northHem">Northern</option>
-            <option value="southHem">Southern</option>
-          </select>
+          <label for="villagers">Favourite Villager:</label>
+          <input list="villagers" name="villager" id="villager" placeholder="Type villager's name here..."/>
+          <datalist id="villagers">
+            <option value="Chops"></option>
+            <option value="Marshal"></option>
+            <option value="Raymond"></option>
+            <option value="Shino"></option>
+            <option value="Bob"></option>
+            <option value="Curt"></option>
+            <option value="Molly"></option>
+            <option value="Zucker"></option>
+            <option value="Sherb"></option>
+            <option value="Lolly"></option>
+            <option value="Ankha"></option>
+            <option value="Iggly"></option>
+            <option value="Stitches"></option>
+            <option value="Maple"></option>
+            <option value="Ione"></option>
+          </datalist>
 
-          <label for="description">Tell us about yourself!</label>
+          <label for="description"
+            >Tell us about yourself! (500 character limit)</label
+          >
           <textarea
             id="description"
             name="description"
-            placeholder="I started playing in 2020.... My favourite villager is..."
-            style="height:200px;"
+            placeholder="I started playing in 2020... I have this many hours in the game..."
+            style="height: 200px"
+            maxlength="500"
+            required
           ></textarea>
 
           <button type="submit" value="submit">Submit</button>
@@ -96,5 +120,6 @@
     </main>
     <!-- FOOTER CONTENT -->
     <footer>&copy eqqtart 2025</footer>
+    <script src="script.js"></script>
   </body>
 </html>

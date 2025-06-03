@@ -44,6 +44,10 @@ nav a:hover {
 }
 
 /* ---------- GALLERY */
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
 
 .profileContainer {
   background: #fffffa;
