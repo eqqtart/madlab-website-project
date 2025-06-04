@@ -5,39 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
 
-    <title></title>
+    <!-- GOOGLE FONT IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="icon" href="" type="image/png" />
-    <link rel="stylesheet" href="styletwo.css" />
+    <title>Maii's Crossing Journal</title>
+
+    <link rel="icon" href="images/maiisjournallogo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <!-- MAIN CONTENT -->
   <body>
     <!-- NAVIGATION BAR -->
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item" id="nav-item-logo">
-          <a href="index.html"
-            ><img src="images/500 px 1.png" alt="madebyqpmaii logo" width="100px"
-          /></a>
-        </li>
-        <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a href="joinus.html">Join Us</a></li>
-      </ul>
-    </nav>
+<nav class="navContainer">
+    <a href="index.html" id="nav-item-logo">
+      <img src="images/maiisjournallogo.png" alt="madebyqpmaii logo" width="100px" />
+    </a>
+    <ul class="nav-list" id="navList">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="profiles.html">Profiles</a></li>
+      <li class="nav-item"><a href="joinus.html">Join Us</a></li>
+      <li class="nav-item" id="darkMode"><button onclick="changeToDarkMode()">Dark mode</button></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
     <!-- HEADER CONTENT -->
     <header>
-      <h1></h1>
+      <h1>Want a Villager Profile Card? Apply Here!</h1>
     </header>
     <!-- MAIN CONTENT -->
     <main>
-        <form name="signupForm" action="#" method="post">
-                      <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required placeholder="Enter name here "/>
+      <div class="container">
+        <form name="signupForm" action="" method="post">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="Your email address here..."/>
+
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your character name here..."
+          />
+
+          <label for="islandName">Island Name:</label>
+          <input
+            type="text"
+            id="islandName"
+            name="islandName"
+            required
+            placeholder="Your island name here..."
+          />
+
+          <label for="dreamAddy">Dream Address (optional):</label>
+          <input
+            type="text"
+            id="dreamAddy"
+            name="dreamAddy"
+            placeholder="Insert dream address here..."
+            maxlength="17"
+          />
+
+          <label for="fruit">Native Fruit:</label>
+          <select id="fruit" name="fruit" required>
+            <option value="apple">Apple</option>
+            <option value="pear">Pear</option>
+            <option value="orange">Orange</option>
+            <option value="peach">Peach</option>
+            <option value="cherry">Cherry</option>
+          </select>
+
+          <label for="villagers">Favourite Villager:</label>
+          <input list="villagers" name="villager" id="villager" placeholder="Type villager's name here..."/>
+          <datalist id="villagers">
+            <option value="Chops"></option>
+            <option value="Marshal"></option>
+            <option value="Raymond"></option>
+            <option value="Shino"></option>
+            <option value="Bob"></option>
+            <option value="Curt"></option>
+            <option value="Molly"></option>
+            <option value="Zucker"></option>
+            <option value="Sherb"></option>
+            <option value="Lolly"></option>
+            <option value="Ankha"></option>
+            <option value="Iggly"></option>
+            <option value="Stitches"></option>
+            <option value="Maple"></option>
+            <option value="Ione"></option>
+          </datalist>
+
+          <label for="description"
+            >Tell us about yourself! (500 character limit)</label
+          >
+          <textarea
+            id="description"
+            name="description"
+            placeholder="I started playing in 2020... I have this many hours in the game..."
+            style="height: 200px"
+            maxlength="500"
+            required
+          ></textarea>
+
+          <button type="submit" value="submit">Submit</button>
         </form>
+      </div>
     </main>
     <!-- FOOTER CONTENT -->
     <footer>&copy eqqtart 2025</footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,239 @@
+/* ---------- WHOLE WEBSITE */
+* { 
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/* ---------- DARK MODE */
+body {
+  background-color: #f8eebc;
+}
+
+.dark-mode {
+  background-color: #2c506b;
+}
+
+/* ---------- NAVIGATION */
+.navContainer {
+  background-color: #fff9e5;
+  box-shadow: 0px 0px 5px lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-item-logo {
+  padding: 1rem;
+  margin-left: 0.5rem;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+
+nav a:hover {
+  color: mediumaquamarine;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+/* Responsive styles for screens 600px and below */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* hidden by default */
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex; /* show menu when active */
+  }
+
+  .nav-item {
+    margin: 1rem;
+  }
+
+  .hamburger {
+    background-color: #74e0aa;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* ---------- PROFILE PAGE */
+h1 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.profileContainer {
+  /* background: #fffffa; */
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileCard {
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+  height: 450px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.profileCard:hover {
+  transform: translateY(-2px);
+}
+
+.profileCard img {
+  height: 450px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+}
+
+.info {
+  max-width: 0;
+  opacity: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #fefefe;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid #eee;
+  transition: max-width 0.6s ease, opacity 0.4s ease, padding 0.4s ease;
+  white-space: normal;
+}
+
+.profileCard.expanded .info {
+  max-width: 400px;
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+.info h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+
+  .profileCard {
+    width: 400px;
+    height: 200px;
+  }
+
+  .profileCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .info {
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+
+  .profileCard.expanded .info {
+    max-width: 100%;
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+}
+
+@media (max-width: 510px) {
+  .profileContainer {
+    padding-right: 50px;
+  }
+}
+
+/* ---------- FORM */
+h1{
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  border-radius: 5px;
+  background-color: #fff9e5;
+  padding: 50px;
+  /* max-width: calc(100% - 100px); */
+}
+
+input, select, datalist, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+button {
+  background-color: #74e0aa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #dbbf9e;
+}
+
+
+/* ---------- FOOTER */
+footer {
+  padding: 1rem;
+  text-align: center;
+}
